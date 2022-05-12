@@ -8,6 +8,6 @@ jobs:
   compare:
     runs-on: ubuntu-latest
     steps:
-      run: |
-        git remote add base https://github.com/TermMC/crazy_amphib_wetter.git
-        git diff main base/main
+      - run: |
+         git remote add base https://github.com/TermMC/crazy_amphib_wetter.git
+         git diff main base/main
