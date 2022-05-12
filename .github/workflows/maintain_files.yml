@@ -1,0 +1,14 @@
+name: Maintain Platform Files
+on:
+  push:
+    branches: [main]
+
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      run: |
+        git remote add base https://github.com/TermMC/crazy_amphib_wetter.git
+        git diff main base
